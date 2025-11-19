@@ -22,7 +22,6 @@
     <Member Name="Diagnostics" Datatype="Bool" />
     <Member Name="Measurements" Datatype="Bool" />
     <Member Name="Parameters" Datatype="Bool" />
-	<Member Name="Parameters_Test" Datatype="Bool" />
   </Section>
   <Section Name="Output">
     <Member Name="Done" Datatype="Bool" />

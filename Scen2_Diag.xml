@@ -6,6 +6,7 @@
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
   <Section Name="Input">
     <Member Name="ID" Datatype="DInt" />
+     <Member Name="ID_Testgit" Datatype="DInt" />
     <Member Name="Port" Datatype="Int" />
     <Member Name="EV_ID" Datatype="C_Alarm_s" />
   </Section>

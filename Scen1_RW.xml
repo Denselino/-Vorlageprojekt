@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="REQ" Datatype="Bool" />
+    <Member Name="ID" Datatype="DInt" />
+    <Member Name="PORT" Datatype="Int" />
+    <Member Name="RD_WR" Datatype="Bool" />
+    <Member Name="ParameterPage0" Datatype="Bool" />
+    <Member Name="SystemCommands" Datatype="Bool" />
+    <Member Name="VendorName" Datatype="Bool" />
+    <Member Name="VendorText" Datatype="Bool" />
+    <Member Name="ProductName" Datatype="Bool" />
+    <Member Name="ProductID" Datatype="Bool" />
+    <Member Name="SerialNumber" Datatype="Bool" />
+    <Member Name="HWRevision" Datatype="Bool" />
+    <Member Name="FWRevision" Datatype="Bool" />
+    <Member Name="ApplicationSpecificName" Datatype="Bool" />
+    <Member Name="Diagnostics" Datatype="Bool" />
+    <Member Name="Measurements" Datatype="Bool" />
+    <Member Name="Parameters" Datatype="Bool" />
+	<Member Name="Parameters_Test" Datatype="Bool" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Done" Datatype="Bool" />
+    <Member Name="Busy" Datatype="Bool" />
+    <Member Name="Error" Datatype="Bool" />
+    <Member Name="Status" Datatype="Word" />
+    <Member Name="DiagDeviceFB" Datatype="&quot;LIOLink_typeDiagnostics&quot;" />
+    <Member Name="Data_out" Datatype="&quot;LIOLink_3RR24_typeAll&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="IO_LINK_3RR24_300_400_Instance" Datatype="&quot;LIOLink_3RR24&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Data_temp" Datatype="&quot;LIOLink_3RR24_typeAll&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="return_val" Datatype="Int" />
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <Name>Scen1_RW</Name>
+      <Namespace />
+      <Number>4</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="REQ" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="ID" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="RD_WR" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="PORT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="ParameterPage0" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="SystemCommands" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="VendorName" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="VendorText" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="ProductName" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="ProductID" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="31">
+      <Symbol>
+        <Component Name="SerialNumber" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
+      <Symbol>
+        <Component Name="HWRevision" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="33">
+      <Symbol>
+        <Component Name="FWRevision" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="34">
+      <Symbol>
+        <Component Name="ApplicationSpecificName" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="35">
+      <Symbol>
+        <Component Name="Diagnostics" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="36">
+      <Symbol>
+        <Component Name="Measurements" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="37">
+      <Symbol>
+        <Component Name="Parameters" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="38">
+      <Symbol>
+        <Component Name="Data_temp" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="39">
+      <Symbol>
+        <Component Name="Done" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="40">
+      <Symbol>
+        <Component Name="Busy" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="41">
+      <Symbol>
+        <Component Name="Error" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="42">
+      <Symbol>
+        <Component Name="Status" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="43">
+      <Symbol>
+        <Component Name="DiagDeviceFB" />
+      </Symbol>
+    </Access>
+    <Call UId="44">
+      <CallInfo Name="LIOLink_3RR24" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="45">
+          <Component Name="IO_LINK_3RR24_300_400_Instance" />
+        </Instance>
+        <Parameter Name="execute" Section="Input" Type="Bool" />
+        <Parameter Name="logicalAddr" Section="Input" Type="DInt" />
+        <Parameter Name="cap" Section="Input" Type="Int" />
+        <Parameter Name="readWrite" Section="Input" Type="Bool" />
+        <Parameter Name="port" Section="Input" Type="Int" />
+        <Parameter Name="parameterPage0" Section="Input" Type="Bool" />
+        <Parameter Name="systemCommands" Section="Input" Type="Bool" />
+        <Parameter Name="vendorName" Section="Input" Type="Bool" />
+        <Parameter Name="vendorText" Section="Input" Type="Bool" />
+        <Parameter Name="productName" Section="Input" Type="Bool" />
+        <Parameter Name="productID" Section="Input" Type="Bool" />
+        <Parameter Name="serialNumber" Section="Input" Type="Bool" />
+        <Parameter Name="hwRevision" Section="Input" Type="Bool" />
+        <Parameter Name="fwRevision" Section="Input" Type="Bool" />
+        <Parameter Name="appSpecificName" Section="Input" Type="Bool" />
+        <Parameter Name="diagnostics" Section="Input" Type="Bool" />
+        <Parameter Name="measurements" Section="Input" Type="Bool" />
+        <Parameter Name="parameters" Section="Input" Type="Bool" />
+        <Parameter Name="done" Section="Output" Type="Bool" />
+        <Parameter Name="busy" Section="Output" Type="Bool" />
+        <Parameter Name="error" Section="Output" Type="Bool" />
+        <Parameter Name="status" Section="Output" Type="Word" />
+        <Parameter Name="diagDeviceFB" Section="Output" Type="&quot;LIOLink_typeDiagnostics&quot;" />
+        <Parameter Name="data" Section="InOut" Type="&quot;LIOLink_3RR24_typeAll&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="48">
+      <OpenCon UId="46" />
+      <NameCon UId="44" Name="en" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="21" />
+      <NameCon UId="44" Name="execute" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="22" />
+      <NameCon UId="44" Name="logicalAddr" />
+    </Wire>
+    <Wire UId="51">
+      <OpenCon UId="47" />
+      <NameCon UId="44" Name="cap" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="23" />
+      <NameCon UId="44" Name="readWrite" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="24" />
+      <NameCon UId="44" Name="port" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="25" />
+      <NameCon UId="44" Name="parameterPage0" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="26" />
+      <NameCon UId="44" Name="systemCommands" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="27" />
+      <NameCon UId="44" Name="vendorName" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="28" />
+      <NameCon UId="44" Name="vendorText" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="29" />
+      <NameCon UId="44" Name="productName" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="30" />
+      <NameCon UId="44" Name="productID" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="31" />
+      <NameCon UId="44" Name="serialNumber" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="32" />
+      <NameCon UId="44" Name="hwRevision" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="33" />
+      <NameCon UId="44" Name="fwRevision" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="34" />
+      <NameCon UId="44" Name="appSpecificName" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="35" />
+      <NameCon UId="44" Name="diagnostics" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="36" />
+      <NameCon UId="44" Name="measurements" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="37" />
+      <NameCon UId="44" Name="parameters" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="38" />
+      <NameCon UId="44" Name="data" />
+    </Wire>
+    <Wire UId="68">
+      <NameCon UId="44" Name="done" />
+      <IdentCon UId="39" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="44" Name="busy" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="70">
+      <NameCon UId="44" Name="error" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="44" Name="status" />
+      <IdentCon UId="42" />
+    </Wire>
+    <Wire UId="72">
+      <NameCon UId="44" Name="diagDeviceFB" />
+      <IdentCon UId="43" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Data_temp" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="return_val" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Data_out" />
+      </Symbol>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Any</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="26">
+      <OpenCon UId="25" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="SRCBLK" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="29">
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="12" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="13" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>
